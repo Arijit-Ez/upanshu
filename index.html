@@ -33,16 +33,16 @@
             padding: 20px;
         }
 
-
         .heart {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: red;
-            clip-path: path("M25 5 C10 -10, 0 10, 0 25 C0 40, 25 50, 25 50 C25 50, 50 40, 50 25 C50 10, 40 -10, 25 5");
-            animation: floatUp 4s infinite ease-in-out;
-            z-index: 1;
-        }
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    clip-path: polygon(50% 15%,80% 0,100% 30%,50% 100%,0 30%,20% 0);
+    animation: floatUp 4s infinite ease-in-out;
+    z-index: 1;
+}
+
 
 
         @media (max-width: 768px) {
@@ -90,7 +90,7 @@
             heart.style.left = Math.random() * 100 + "vw";
             heart.style.animationDuration = Math.random() * 3 + 2 + "s";
             document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
+            setTimeout(() => heart.remove(), 9999);
         }
         setInterval(createHeart, 300);
     </script>
